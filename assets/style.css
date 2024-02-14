@@ -148,7 +148,7 @@ body {
 .display {
     margin-bottom: 10px;
     background-color: #000;
-    color: #07631e;
+    color: #dadada;
     padding: 5px;
     border: 1px solid #000;
     width: 100px; /* Ajustar según sea necesario */
@@ -158,22 +158,19 @@ body {
 
 
 .accept {
-    padding: 10px 20px;
-    background-color: #28a745; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    border: none;
-    border-radius: 50%; /* Hacer el botón circular */
+    width: 50px;
+    height: 50px;
+    background-color: #31801d; /* Color de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    font-size: 16px;
+    border-radius: 50%; /* Hacer el botón circular */
     transition: background-color 0.3s ease; /* Transición suave */
 }
 
 .accept:hover {
     background-color: #218838; /* Cambia el color de fondo al pasar el ratón */
-}
-
-.accept i {
-    margin-right: 5px; /* Espacio entre el icono y el texto */
 }
 
 .trash {
@@ -207,3 +204,29 @@ body {
 .dial-top:hover {
     background-color: #5a6268; /* Cambia el color de fondo al pasar el ratón */
 }
+
+.nota-contra {
+    display: none;
+    width: 200px; /* Ancho de la nota */
+    height: 200px; /* Altura de la nota */
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+
+}
+
+.contenido-contra {
+    padding: 20px; /* Espaciado interno */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+}
+
+.contenido-contra p {
+    margin: 0; /* Elimina el margen del párrafo */
+}
+

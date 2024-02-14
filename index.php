@@ -44,24 +44,32 @@
     <div class="dial">
         <div class="row">
             <div class="digit">1</div>
-            <div class="digit">2</div>
-            <div class="digit">3</div>
-        </div>
-        <div class="row">
             <div class="digit">4</div>
-            <div class="digit">5</div>
-            <div class="digit">6</div>
+            <div class="digit">7</div>
         </div>
         <div class="row">
-            <div class="digit">7</div>
+            <div class="digit">2</div>
+            <div class="digit">5</div>
             <div class="digit">8</div>
+        </div>
+        <div class="row">
+            <div class="digit">3</div>
+            <div class="digit">6</div>
             <div class="digit">9</div>
         </div>
     </div>
-    <button class="accept"><i class="fas fa-check"></i> </button>
+    <div class="accept"><i class="fas fa-check"></i> </div>
     <div class="trash"><i class="fas fa-trash-alt"></i></div>
     <div class="dial-top"><i class="fas fa-arrow-up"></i></div>
 </div>
+
+
+    <div class="nota-contra">
+        <div class="contenido-contra">
+            <p id="codigoPistola">Código Pistola: 73275838</p>
+        </div>
+    </div>
+
 
         
         <script

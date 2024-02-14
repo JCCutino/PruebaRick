@@ -1,17 +1,17 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var contador = 1; // Inicializar contador
     var primeraParteResuelta = false; // Variable booleana para determinar si se ha resuelto la primera parte del puzzle
 
-    $('.rick').click(function() {
+    $('.rick').click(function () {
         $('.popup').fadeIn();
     });
 
-    $('#close').click(function() {
+    $('#close').click(function () {
         $('.popup').fadeOut();
         contador = 1; // Reiniciar el contador al cerrar el popup
     });
 
-    $('#next').click(function() {
+    $('#next').click(function () {
         // Aumentar contador
         contador++;
 
@@ -49,34 +49,65 @@ $(document).ready(function() {
         }
     });
 
-    $('#hoja').click(function() {
+    $('#hoja').click(function () {
         $('.popup-hoja').fadeIn();
     });
 
-    $(document).click(function(event) {
+    $(document).click(function (event) {
         if (!$(event.target).closest('.popup-hoja').length && !$(event.target).is('.hoja')) {
             $('.popup-hoja').fadeOut();
         }
     });
 
-   
-        $('#caja').click(function() {
-            $('.panel').fadeIn();
-            $('.panel').css('display', 'flex'); // Cambiar el estilo CSS a display: flex;
 
-        });
- 
+    $('#caja').click(function () {
+        $('.panel').fadeIn();
+        $('.panel').css('display', 'flex'); // Cambiar el estilo CSS a display: flex;
+
+    });
+
 
     var numbers = []; // Array para almacenar los números seleccionados
 
-    $('.digit').click(function() {
-        var number = $(this).text(); // Obtener el número del elemento clicado
-        numbers.push(number); // Añadir el número al array
-        $('.display').text(numbers.join('')); // Mostrar los números en el display
+    $('.digit').click(function () {
+        if (numbers.length < 5) { // Verificar si hay menos de 5 caracteres
+            var number = $(this).text(); // Obtener el número del elemento clicado
+            numbers.push(number); // Añadir el número al array
+            $('.display').text(numbers.join('')); // Mostrar los números en el display
+        }
     });
 
-    $('.trash').click(function() {
+    $('.trash').click(function () {
         numbers = []; // Vaciar el array
         $('.display').text(''); // Limpiar el display
     });
+
+    $('.dial-top').click(function () {
+        $('.panel').fadeOut();
+    });
+
+    $('.accept').click(function () {
+        var combination = $('.display').text(); // Obtener la combinación del display
+        var correctCombination = "12345"; // Definir la combinación correcta
+
+        if (combination === correctCombination) { // Verificar si la combinación es correcta
+            primeraParteResuelta = true;
+            $('.panel').fadeOut();
+            $('.nota-contra').fadeIn();
+        } else {
+            $('.display').css('color', 'red'); // Cambiar el color del texto a rojo
+        }
+    });
+
+    $('.nota-contra').click(function(event) {
+        // Detener la propagación del evento click
+        event.stopPropagation();
+    });
+
+    $('.nota-contra').click(function() {
+        // Ocultar el popup-hoja solo si se hace clic fuera de la nota
+        $(this).fadeOut();
+    });
+
+
 });
