@@ -27,6 +27,7 @@
     <img src="img/rick1.png" alt="" id="rick" class="rick">
     <img src="img/hoja-garaje.png" alt="" id="hoja" class="hoja">
     <img src="img/caja-fuerte.png" alt="" id="caja" class="caja">
+    <img src="img/pistola-portal.webp" alt="" id="pistola" class="pistola">
 
 <div class="popup">
     <p id="message">¡Oye tú! ¿Qué haces aquí? ¿No tienes nada mejor que hacer que estar atrapado en este absurdo escape room?</p>

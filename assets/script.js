@@ -109,5 +109,7 @@ $(document).ready(function () {
         $(this).fadeOut();
     });
 
-
+    $('#pistola').click(function () {
+        $('.popup-pistola').fadeIn();
+    });
 });
