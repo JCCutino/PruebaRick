@@ -38,7 +38,7 @@
 </div>
 
 <div class="popup-hoja" id="popup-hoja">
-            <p>--. .. .-.. .. .--. --- .-.. .-.. .- ... .-.-.</p>
+            <p>--. .. .-.. .. .--. --- .-.. .-.. .- ...</p>
 </div>
 <div class="panel">
     <div class="display"></div> 
@@ -70,6 +70,27 @@
             <p id="codigoPistola">Código Pistola: 73275838</p>
         </div>
     </div>
+
+    <div class="panel-pistola" id="panel-pistola">
+    <div class="display-pistola">_ _ _ _ _ _ _</div>
+    <div class="dial-pistola">
+        <div class="digit-pistola">0</div>
+        <div class="digit-pistola">1</div>
+        <div class="digit-pistola">2</div>
+        <div class="digit-pistola">3</div>
+        <div class="digit-pistola">4</div>
+        <div class="digit-pistola">5</div>
+        <div class="digit-pistola">6</div>
+        <div class="digit-pistola">7</div>
+        <div class="digit-pistola">8</div>
+        <div class="digit-pistola">9</div>
+    </div>
+    <button class="accept-pistola"><i class="fas fa-check"></i> Aceptar</button>
+    <div class="trash-pistola"><i class="fas fa-trash-alt"></i></div>
+    <div class="dial-top-pistola"><i class="fas fa-arrow-up"></i></div>
+    <div class="message-pistola"></div>
+</div>
+
 
 
         
